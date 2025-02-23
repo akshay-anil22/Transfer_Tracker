@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding-top: 10px;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background: url("https://cdn.builder.io/api/v1/image/assets/3df52f9184ef48149b5df6512666c86d/4228d0770cebac6fe4cef4f7c8b614e0fff6e9a2b16317d7b5056eeda69c4153?apiKey=3df52f9184ef48149b5df6512666c86d&"
+  ) no-repeat center center/cover;
+}
+
+
+.container {
+  background-color: rgba(237, 234, 229, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 780px;
+  align-items: start;
+  font-family: __Inter_d65c78, sans-serif;
+  border-style: none;
+  border-width: 1px;
+  padding: 182px 72px;
+}
+
+@media (max-width: 991px) {
+  .content {
+    max-width: 100%;
+    padding: 100px 20px;
+  }
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  width: 100vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+@font-face {
+  font-family: 'custom';
+  src:url("../../../public/custom.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.title {
+  position: relative;
+  letter-spacing: 3.88px;
+  border-radius: 1px;
+  color: rgba(255, 255, 255, 1);
+  height: 138px;
+  margin: 10px auto 0 39px;
+  border: 2px none rgba(76, 76, 76, 1);
+  font-family: 'custom', sans-serif;
+  font-size: 150px;
+  color: #0cffce;
+  text-transform: uppercase;
+}
+
+
+
+.subtitle {
+  position: relative;
+  color: rgba(0, 0, 0, 1);
+  margin: 46px 0 0 65px;
+  padding-bottom: 12px;
+  font-family: 'custom', sans-serif;
+  font-weight: 300;
+  font-size: 65px;
+}
+
+@media (max-width: 991px) {
+  .subtitle {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+
+.inputContainer {
+  position: relative;
+  border-radius: 12px;
+  background-color: rgba(14, 28, 29, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column; /* Stack input and button vertically */
+  width: 452px;
+  max-width: 100%;
+  min-height: auto;
+  margin-left: 60px; /* Align to the left by default */
+  gap: 15px;
+  padding: 30px;
+}
+
+.inputField {
+  flex-grow: 1;
+  background: transparent;
+  border: 2px solid transparent;
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+  width: 100%;
+  opacity: 0;
+  width: 0;
+  
+}
+
+.inputContainer:hover .inputField {
+  opacity: 1;
+  width: auto;
+  padding: 15px;
+  border: 1px solid white;
+}
+
+.searchButton {
+  border-radius: 12px;
+  background-color: rgba(7, 66, 50, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: 1.4px;
+  min-height: 50px;
+  padding: 10px;
+  font: 25px Playfair Display, sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.82);
+  cursor: pointer;
+}
+
+/* Mobile Styling: Center everything */
+@media (max-width: 991px) {
+  .inputContainer {
+    margin: 0 auto; /* Centers the container */
+    text-align: center;
+    align-items: center; /* Ensures the input and button are centered */
+    width: 90%; /* Make it responsive */
+  }
+
+  .subtitle {
+    text-align: center; /* Center text */
+    margin: 0 auto;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
